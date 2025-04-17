@@ -289,16 +289,21 @@ body {
         height: 100%;
     }
 
+    .seekbar {
+        top: 13vh;
+    }
+
     .cross img {
         display: block;
     }
 
     .my-playlists h1 {
-        padding: 5%;
+        padding: 29% 7% 4%;
     }
 
     .header {
         width: 100vw;
+        position: fixed;
     }
 
     .header button {
@@ -311,8 +316,7 @@ body {
         top: 80vh;
         display: flex;
         flex-direction: column;
-        padding: 0;
-        margin: 0;
+
     }
 
     .songinfo {
@@ -336,6 +340,9 @@ body {
         display: flex;
         flex-direction: row-reverse;
     }
+    .seekbar{
+        top: 135px;
+    }
 
     .volume img {
         width: 30px;
@@ -345,18 +352,14 @@ body {
 
     .range input {
         position: absolute;
-        width: 250%;
-        right: -10px;
+        width: 300%;
+        right: -55px;
         top: 13px;
     }
 
     .songtime {
         position: relative;
-        bottom: 20%;
-    }
-
-    .seekbar {
-        top: 18vh;
+        bottom: 10%;
     }
 
     .circle {
@@ -395,18 +398,20 @@ body {
     }
 }
 
-@media (max-width: 1300px) and (min-width: 500px) {
+@media (max-width: 500px) {
+
+
     .cardcontainer {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 20px;
-        min-height: 190rem;
+        min-height: 150rem;
 
     }
 
     .right {
-        min-height: 215rem;
+        height: 200rem;
     }
 
     .card {
@@ -416,13 +421,71 @@ body {
     .volume {
         position: relative;
         left: 3px;
-
     }
 
     .range {
         position: relative;
-        left: 4.5vw;
+        left: 6.5vw;
         bottom: 3px;
-        width: 5vw;
+        width: 45px;
+    }
+
+    .playbar {
+        position: relative;
+        top: 5px;
     }
 }
+
+/* 1299 to 591 */
+@media (max-width:1299px) and (min-width:591px) {
+
+    .left {
+        margin: -1%;
+    }
+
+    .right {
+        min-height: 260rem;
+    }
+
+    .cardcontainer {
+        min-height: 65rem;
+    }
+
+    .my-playlists h1 {
+        padding: 25% 3% 2%;
+    }
+
+    .playbar {
+        position: fixed;
+        top: 80vh;
+    }
+
+    .volume img {
+        top: 8px;
+        right: 9vh;
+    }
+
+    .range input {
+        top: 22px;
+        right: 50%;
+    }
+
+    .seekbar {
+        top: 8vh;
+    }
+
+    .playpause {
+        top: 60px;
+    }
+
+    .songtime {
+        font-size: 30px;
+        top: 10px;
+    }
+
+    .songinfo {
+        font-size: 25px;
+        width: 600px;
+    }
+}
+
