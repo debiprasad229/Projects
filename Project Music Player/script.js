@@ -8,6 +8,7 @@ async function getSongs(folder) {
     currfolder = folder
     let a = await fetch(`/${folder}/`)
     let response = await a.text()
+
     let div = document.createElement("div")
     div.innerHTML = response;
     let a_link = div.getElementsByTagName("a")
@@ -18,7 +19,7 @@ async function getSongs(folder) {
             songs.push(element.href.split(`/${folder}/`)[1])
         }
     }
-    
+
     //show all songs in the playlist
     let songul = document.querySelector(".songslist").getElementsByTagName("ul")[0]
     songul.innerHTML = ""
@@ -40,11 +41,10 @@ async function getSongs(folder) {
             PlayMusic(e.querySelector(".info").firstElementChild.innerHTML)
         })
     })
-  
 }
-
 const PlayMusic = (track, pause = false) => {
     currentsong.src = `/${currfolder}/` + track
+  
     if (!pause) {
         currentsong.play()
         play.src = "SVGs/pause.svg"
@@ -77,13 +77,13 @@ async function main() {
         })
     })
 
-   previous.addEventListener("click", () => {
+    previous.addEventListener("click", () => {
         let index = songs.indexOf(currentsong.src.split("/").slice(-1)[0])
         if ((index - 1) >= 0) {
             PlayMusic(songs[index - 1])
         }
     })
-   
+
     next.addEventListener("click", () => {
         let index = songs.indexOf(currentsong.src.split("/").slice(-1)[0])
         if ((index + 1) < songs.length) {
@@ -114,16 +114,17 @@ async function main() {
     //add event listener to menu image
     document.querySelector(".menu").addEventListener("click", () => {
         document.querySelector(".left").style.left = "0"
+        document.querySelector(".footer").style.display="none"
 
     })
     //add event listener to cross image
     document.querySelector(".cross").addEventListener("click", () => {
         document.querySelector(".left").style.left = "-110%"
-   
+         document.querySelector(".footer").style.display="flex"
     })
     //add an event to volume
     document.querySelector(".range").getElementsByTagName("input")[0].addEventListener("change", (e) => {
-       
+
         currentsong.volume = parseInt(e.target.value) / 100
     })
     //add an event to mute the volume
@@ -132,15 +133,13 @@ async function main() {
         if (e.target.src.includes("volume.svg")) {
             e.target.src = e.target.src.replace("volume.svg", "Mute.svg")
             currentsong.volume = 0
-            document.querySelector(".range").getElementsByTagName("input")[0].value=0
+            document.querySelector(".range").getElementsByTagName("input")[0].value = 0
         }
         else {
             e.target.src = e.target.src.replace("Mute.svg", "volume.svg")
             currentsong.volume = 1
-            document.querySelector(".range").getElementsByTagName("input")[0].value=100
+            document.querySelector(".range").getElementsByTagName("input")[0].value = 100
         }
     })
-
-
 }
 main() 
