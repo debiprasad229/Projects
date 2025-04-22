@@ -57,10 +57,12 @@ body {
     position: absolute;
     top: 88.5%;
     gap: 3%;
-    font-size: 11px;
+    font-size: 13px;
     padding: 5% 7%;
 }
-
+.footer span{
+    font-size: 25px;
+}
 .footer a {
     color: white;
 }
@@ -286,9 +288,18 @@ body {
         left: -110%;
         z-index: 1;
         width: 350px;
-        height: 100%;
-    }
 
+    }
+.footer{
+    position: fixed;
+    top: 90%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(34, 34, 34);
+    padding: 2% 7%;
+    z-index: 1;
+}
     .seekbar {
         top: 13vh;
     }
@@ -439,12 +450,17 @@ body {
 /* 1299 to 591 */
 @media (max-width:1299px) and (min-width:591px) {
 
+    .header button{
+        font-size: 40px;
+    }
+    .menu img{
+        width: 100px;
+    }
     .left {
         margin: -1%;
     }
-
     .right {
-        min-height: 260rem;
+        min-height: 265rem;
     }
 
     .cardcontainer {
