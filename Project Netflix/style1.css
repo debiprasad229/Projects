@@ -11,7 +11,6 @@ body {
     background-image: url("assets/bg.jpg");
     background-position: center center;
     background-size: cover;
-    /* Improved responsiveness */
     background-repeat: no-repeat;
     height: 80vh;
     position: relative;
@@ -30,7 +29,6 @@ nav {
     display: flex;
     margin: auto;
     justify-content: space-between;
-    /* Adjusted for more flexibility */
     align-items: center;
     padding: 0 5vw;
     height: 92px;
@@ -143,7 +141,6 @@ nav button {
 .secmedia img,
 .secmedia video {
     max-width: 100%;
-    /* Make media responsive */
     height: auto;
 }
 
@@ -171,7 +168,6 @@ section.first>div :nth-child(2) {
 
 section.third video {
     width: 377px;
-    /* height: 245px; */
     position: absolute;
     right: 133px;
     top: 23px;
@@ -304,9 +300,3 @@ a {
         flex-direction: column;
     }
 }
-
-/* @media screen and (max-width: 2000px){
-    .secmedia video{
-        
-    }
-  } */
