@@ -142,7 +142,9 @@ body {
     flex-wrap: wrap;
 
 }
-
+.right{
+    height: 120vh;
+}
 .card {
     cursor: pointer;
     width: 15vw;
@@ -417,12 +419,12 @@ body {
         flex-direction: column;
         align-items: center;
         gap: 20px;
-        min-height: 150rem;
+        min-height: 125rem;
 
     }
 
     .right {
-        height: 200rem;
+        height: 120rem;
     }
 
     .card {
@@ -442,8 +444,8 @@ body {
     }
 
     .playbar {
-        position: relative;
-        top: 5px;
+        position: fixed;
+        top: 63%;
     }
 }
 
@@ -460,29 +462,31 @@ body {
         margin: -1%;
     }
     .right {
-        min-height: 265rem;
+        min-height: 275rem;
     }
 
     .cardcontainer {
-        min-height: 65rem;
+        max-height: 275rem;
     }
-
+.card h2{
+font-size: 30px;
+}
     .my-playlists h1 {
         padding: 25% 3% 2%;
     }
 
     .playbar {
         position: fixed;
-        top: 80vh;
+        top: 72vh;
     }
 
     .volume img {
-        top: 8px;
+        top: 20px;
         right: 9vh;
     }
 
     .range input {
-        top: 22px;
+        top: 35px;
         right: 50%;
     }
 
@@ -491,17 +495,29 @@ body {
     }
 
     .playpause {
-        top: 60px;
+        top: 75px;
+        left: 30%;
     }
 
     .songtime {
         font-size: 30px;
         top: 10px;
+        right: 40px;
     }
 
     .songinfo {
         font-size: 25px;
         width: 600px;
     }
+    .footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        font-size: 40px;
+    }
+    .footer span{
+        font-size: 40px;
+    }   
 }
 
