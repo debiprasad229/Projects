@@ -1,5 +1,5 @@
 
-console.log("hello")
+console.log("Hello")
 let currentsong = new Audio()
 let songs;
 let currfolder;
@@ -8,7 +8,6 @@ async function getSongs(folder) {
     currfolder = folder
     let a = await fetch(`/${folder}/`)
     let response = await a.text()
-
     let div = document.createElement("div")
     div.innerHTML = response;
     let a_link = div.getElementsByTagName("a")
@@ -19,7 +18,6 @@ async function getSongs(folder) {
             songs.push(element.href.split(`/${folder}/`)[1])
         }
     }
-
     //show all songs in the playlist
     let songul = document.querySelector(".songslist").getElementsByTagName("ul")[0]
     songul.innerHTML = ""
@@ -28,7 +26,6 @@ async function getSongs(folder) {
                             <img class="invert" src="SVGs/music.svg" alt="">
                             <div class="info">
                                 <div>${song.replaceAll("%20", " ")}</div>
-                                <div> Debi</div>
                             </div>
                             <div class="playnow">
                                 <span>PlayNow</span>
@@ -55,6 +52,7 @@ const PlayMusic = (track, pause = false) => {
 }
 
 async function main() {
+
     //get the list of songs
     await getSongs("songs/alan")
     PlayMusic(songs[0], true)
@@ -142,4 +140,5 @@ async function main() {
         }
     })
 }
+
 main() 
