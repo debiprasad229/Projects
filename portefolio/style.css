@@ -12,6 +12,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    background: linear-gradient(to right, #00f2fe, black);
 }
 
 /* Header styles */
@@ -21,6 +22,8 @@ header {
     position: sticky;
     top: 0;
     z-index: 100;
+    width: 75vw;
+    border-radius: 10px 90px;
 }
 
 nav ul {
@@ -59,7 +62,7 @@ h1, h2, h3 {
 
 h1 {
     font-size: 2.5rem;
-    color: #007bff;
+    color: white;
 }
 
 h2 {
@@ -68,6 +71,9 @@ h2 {
     padding-bottom: 0.5rem;
 }
 
+#about p{
+    color: white;
+}
 /* Home section */
 #home {
     text-align: center;
@@ -76,7 +82,7 @@ h2 {
 
 #home p {
     font-size: 1.2rem;
-    color: #666;
+    color: white;
 }
 
 /* Skills section */
@@ -88,6 +94,7 @@ h2 {
 }
 
 #skills li {
+    cursor: pointer;
     background-color: #007bff;
     color: white;
     padding: 0.5rem 1rem;
@@ -101,7 +108,9 @@ h2 {
     margin-bottom: 1rem;
     border-radius: 5px;
 }
-
+.project a{
+    text-decoration: none;
+}
 /* Contact form */
 form {
     display: grid;
@@ -137,7 +146,6 @@ button:hover {
 footer {
     text-align: center;
     padding: 1rem;
-    background-color: #f4f4f4;
     margin-top: 2rem;
 }
 
@@ -150,5 +158,9 @@ footer {
 
     nav ul li {
         margin: 10px 0;
+    }
+    header{
+        width: 85vw;
+        position: relative;
     }
 }
