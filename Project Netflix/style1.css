@@ -29,6 +29,7 @@ nav {
     display: flex;
     margin: auto;
     justify-content: space-between;
+    /* Adjusted for more flexibility */
     align-items: center;
     padding: 0 5vw;
     height: 92px;
@@ -138,16 +139,15 @@ nav button {
     position: relative;
 }
 
-.secmedia img,
-.secmedia video {
+.secmedia img {
     max-width: 100%;
-    height: auto;
+    z-index: 1;
 }
 
 .secmedia video {
     position: absolute;
-    top: 97px;
-    right: 87px;
+    top: 70px;
+    right: 65px;
     height: 55%;
 }
 
@@ -167,10 +167,10 @@ section.first>div :nth-child(2) {
 }
 
 section.third video {
-    width: 377px;
+    max-width:61%;
     position: absolute;
-    right: 133px;
-    top: 23px;
+top: 4%;
+left: 19%;
 }
 
 .footer {
@@ -258,12 +258,19 @@ a {
 
 /* Media Queries for Responsiveness */
 @media screen and (max-width: 768px) {
-    nav {
+    *{
+        font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
+    }
+    nav { 
         flex-direction: column;
         gap: 20px;
     }
-
-    .content> :nth-child(1),
+.btn-red, .main input{
+    width: 45%;
+    padding: 4px 0px;
+    position: relative;
+    bottom: 20px;
+}
     .content> :nth-child(2),
     .content> :nth-child(3) {
         font-size: 24px;
