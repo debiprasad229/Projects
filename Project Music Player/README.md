@@ -4,4 +4,4 @@ I added only one song in each folder because of large size, but you can copy you
 Here's the guide where to add your songs to folder-
 project music player>songs>Alan Walker.
 Same do it for other files as you wanted.
-It is responsive for laptops and mobiles.
+It is responsive for all devices.
